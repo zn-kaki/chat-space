@@ -30,17 +30,40 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### Association
-- belongs_to :group
-- belongs_to :user
-
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false, unque: true|
 |mail|string|null: false|
+|password|string||
+|group_id|integer||
 
 ### Association
 - has_many :group, through: members
 - has_many :messages
 - has_many :members
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|user_id|integer||
+
+### Association
+-has_many :messages
+-has_many :users, through: :user_group
+
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body||text||
+|image|text||
+|user_id|integer||
+|group_id|integer||
+
+### Association
+-belongs_to :user
+-belongs_to :group
+
+
+
