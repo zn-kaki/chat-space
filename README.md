@@ -30,6 +30,10 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
+### Association
+-belongs_to :group
+-belongs_to :user
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -51,7 +55,8 @@ Things you may want to cover:
 
 ### Association
 -has_many :messages
--has_many :users, through: :user_group
+-has_many :through: :user_group
+-belongs_to :users
 
 ## messagesテーブル
 |Column|Type|Options|
