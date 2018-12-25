@@ -13,6 +13,7 @@ module ChatSpace
       g.javascripts false
       g.helper false
       g.test_framework false
+      config.i18.default_locale= :ja
     end
   end
 end
