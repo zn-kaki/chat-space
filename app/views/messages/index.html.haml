@@ -1,0 +1,19 @@
+= render 'shared/sidebar'
+.main
+  .main_header
+    .main__header-left
+      %p.main__group-name= @group.name
+      %p.main__members-name= "Members: #{group_members(@group.users)}"
+    .main__header-right
+      = link_to 'Edit', edit_group_path(@group), class:  'main__edit-btn'
+  .main__body
+    = render @messages
+
+    .form
+      = form_for [@group, @message] do |f|
+        =f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          =f.label :image, class: 'form__mask__image' do
+            =fa_icon 'picture-o', class: 'icon'
+            =f.file_field :image, class: 'hidden'
+          =f.submit 'Send', class: 'form__submit'
