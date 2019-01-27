@@ -7,7 +7,7 @@ $(function() {
                     ${ message.user_name}
                   </div>
                   <div class="upper-message__date">
-                      ${message.time}
+                      ${message.created_at}
                   </div>
                  </div>
                  <div class="lower-message>
@@ -26,7 +26,6 @@ function scroll(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
-    console.log(this)
 
     $.ajax({
       url: url,
