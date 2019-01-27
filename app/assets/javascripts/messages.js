@@ -18,6 +18,9 @@ $(function() {
                 </div>`;
   return html;
   }
+function scroll(){
+  $(.'messages').animate({ scrollTop: $(.'messages')[0].scrollHeight }, 'fast');
+}
   //メッセージの非同期通信
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -39,5 +42,9 @@ $(function() {
       $('.form__message').val("");
       $('.form__submit').prop('disabled',false);
     })
+    .fail(function() {
+      alert('error');
+    })
+    return false;
   })
 })
