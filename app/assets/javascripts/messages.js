@@ -28,7 +28,7 @@ function scroll(){
     var url = $(this).attr('action');
 
     $.ajax({
-      url: url,
+     url: url,
      type: "POST",
      data: formData,
      dataType: 'json',
