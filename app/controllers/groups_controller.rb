@@ -27,6 +27,12 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
+
+    def destroy
+      @group = Group.find(params[:id])
+      @group.destroy
+      redirect_to users_path
+    end
   end
 
   private
