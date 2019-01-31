@@ -6,7 +6,7 @@ function appendUser(user) {
             var html = `<div class='chat-group-user clearfix'>
                   <p class='chat-group-user__name'>${user.name}</p>
                   </div>`
-      search_list.append(html);
+       search_list.append(html);
     }
 // ユーザー名が存在しない
     function appendNoUser(user){
