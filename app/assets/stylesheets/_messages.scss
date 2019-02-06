@@ -1,3 +1,62 @@
+.notice {
+  background-color: $blue;
+  text-align: center;
+  color: $white;
+}
+.contents {
+  width: 100vw;
+  height: 100%;
+  background-color: $white;
+  position: fixed;
+}
+.sidebar {
+  width: 300px;
+  height: 100%;
+  background-color: $right-blue;
+  color: $white;
+  float: left;
+  position: fixed;
+  &__top {
+    height: 100px;
+    background-color: $deep-blue;
+    padding: 0 20px;
+    line-height: 100px;
+     h1 {
+      font-size: 16px;
+      color: $white;
+      font-weight: bold;
+      width: 100px;
+      float: left;
+    }
+    .lists {
+      padding-top: 40px;
+      padding-right: 20px;
+      .icon {
+        color: $white;
+        float: right;
+      }
+    }
+  }
+  &__bottom {
+    height: calc(100% - 100px);
+    padding: 0 20px;
+    overflow: auto;
+    background-color: #2f3e51;
+      .group {
+        padding: 0 20px;
+      }
+      .name {
+        font-size: 15px;
+        color: $white;
+        padding: 20px 0 5px 0;
+      }
+      .message {
+        font-size: 11px;
+        color: $white;
+        padding-bottom: 40px;
+      }
+    }
+}
 .chatbar {
   width: calc(100vw - 300px);
   height: 100%;
@@ -7,7 +66,7 @@
   &__top {
     width: calc(100vw - 300px);
     height: 100px;
-    background-color :white;
+    background-color: $white;
     padding: 0 20px;
     .chatbar__top__left {
       width: 70%;
@@ -42,22 +101,22 @@
   }
   .messages {
     background-color: $main;
-    height: calc(100% - 100px - 80px);
+    height: calc(100% - 10px - 280px);
     width: calc(100vw - 300px);
-    padding-top: 46px;
+    padding-top: 10px;
+    overflow: scroll;
     .message {
       margin-bottom: 40px;
       padding: 0 20px;
       .upper-message {
         background-color: $main;
         display: flex;
-        &__name {
+        .name {
           color: $black;
           font-size: 16px;
           font-weight: bold;
-          line-height: 10px;
         }
-        &__time{
+        .time{
           color: $right-gray;
           font-size: 12px;
           padding-left: 10px;
