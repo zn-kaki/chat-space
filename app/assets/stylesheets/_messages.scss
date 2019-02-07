@@ -101,9 +101,9 @@
   }
   .messages {
     background-color: $main;
-    height: calc(100% - 10px - 280px);
+    height: calc(100% - 150px - 80px);
     width: calc(100vw - 300px);
-    padding-top: 10px;
+    padding-top: 45px;
     overflow: scroll;
     .message {
       margin-bottom: 40px;
