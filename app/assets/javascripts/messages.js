@@ -46,4 +46,35 @@ function scroll(){
     })
     return false;
   })
-})
+//自動更新機能
+  $(function() {
+    seInterval(autoUpdate, 5000);
+//5000ミリ秒ごとにupdateという関数を実行する
+  });
+  function autoUpdate() {
+    var url = window.location.href
+    if (url.match(/\/groups\/\d+\/message/)) {
+      var message_id = $('.message').last().data('message_id');
+        $.ajax({
+          url: url,
+          type: 'GET',
+          data: { id: message_id },
+          dataType: 'json'
+        })
+        .done(function(messages) {
+          if (messages.length !== 0) {
+            messages.forEach(function(message) {
+              var html = buildHTML(message);
+              $('.messages').append(html);
+            });
+          }
+        })
+        .fail(function() {
+          alert('自動更新に失敗しました');
+        })
+    }
+    else {
+      clearInterval(autoUpdate);
+    }
+  }
+});
