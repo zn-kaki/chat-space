@@ -35,10 +35,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :production do
-  gem 'unicorn'
-end
-
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
@@ -62,7 +58,11 @@ end
 
 group :test do
   gem 'chromedriver-helper'
-   gem "faker"
+  gem "faker"
+end
+
+group :production do
+  gem 'unicorn' '5.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
