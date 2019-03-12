@@ -58,7 +58,7 @@ end
 
 group :test do
   gem 'chromedriver-helper'
-  gem "faker"
+  gem 'faker'
 end
 
 group :production do
