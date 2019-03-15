@@ -41,7 +41,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails', '~>3.5'
   gem 'rails-controller-testing'
-  gem 'factory_bot_rails'
+  gem 'factory_bot'
   gem 'faker'
   gem 'selenium-webdriver'
   gem 'capistrano'

@@ -94,9 +94,6 @@ GEM
     execjs (2.7.0)
     factory_bot (5.0.2)
       activesupport (>= 4.2.0)
-    factory_bot_rails (5.0.1)
-      factory_bot (~> 5.0.2)
-      railties (>= 4.2.0)
     faker (1.9.3)
       i18n (>= 0.7)
     ffi (1.10.0)
@@ -289,7 +286,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
-  factory_bot_rails
+  factory_bot
   faker
   font-awesome-rails
   haml-rails
