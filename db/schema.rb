@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20190106030749) do
   end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "content"
-    t.integer  "imaget_will_change"
+    t.string  "content"
+    t.string  "image"
     t.integer  "group_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
